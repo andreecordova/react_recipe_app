@@ -1,0 +1,87 @@
+.main {
+	width: 100%;
+	padding: remy(10) remy(23);
+
+	.title_container {
+		margin-bottom: remy(16);
+
+		.title {
+			font-size: remy(32);
+			margin-bottom: 0rem;
+		}
+	}
+
+	.search_box_container {
+		width: 100%;
+		margin-bottom: remy(15);
+	}
+
+	.recipes_container {
+		display: grid;
+    grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(1,auto);
+		
+		@include desktop {
+			grid-template-columns: repeat(3,1fr);
+		}
+	}
+
+	@include desktop {
+		max-width: remy(1200);
+		margin: remy(8) auto;
+	}
+}
+
+.recipe {
+	width: 100%;
+	padding: remy(10) remy(23);
+
+	.recipe_detail_container {
+		display: grid;
+    grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(1,auto);
+
+		.recipe_image_container,
+		.recipe_information_container {
+			padding: 0rem remy(15);
+		}
+
+		.recipe_image {
+			width: 100%;
+			height: auto;
+		}
+
+		.title {
+			font-size: remy(32);
+			margin: 0rem 0rem remy(16);
+			font-weight:800;
+		}
+
+		.sub_title {
+			font-size: remy(20);
+			margin: 0rem 0rem remy(12);
+			text-decoration: underline;
+			font-weight:600;
+		}
+
+		.ingredients_list {
+			margin: 0rem 0rem remy(16);
+			
+			.ingredient_item {
+				font-size: remy(18);
+				font-weight: 400;
+				font-style: italic;
+				margin-bottom: remy(16);
+			}
+		}
+		
+		@include desktop {
+			grid-template-columns: repeat(2,1fr);
+		}
+	}
+
+	@include desktop {
+		max-width: remy(1200);
+		margin: remy(8) auto;
+	}
+}

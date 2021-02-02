@@ -1,0 +1,16 @@
+.search_box {
+	display: flex;
+	width: 100%;
+	margin-bottom: remy(15);
+
+	.input_search {
+		width: 100%;
+		padding: remy(16);
+		outline: none;
+		border-radius: remy(5);
+		appearance: none;
+		background-color: $white;
+		color: $gray;
+		border: 1px solid $gray;
+	}
+}
