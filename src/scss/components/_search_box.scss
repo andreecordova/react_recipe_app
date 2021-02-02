@@ -1,7 +1,6 @@
 .search_box {
 	display: flex;
 	width: 100%;
-	margin-bottom: remy(15);
 
 	.input_search {
 		width: 100%;
@@ -11,6 +10,6 @@
 		appearance: none;
 		background-color: $white;
 		color: $gray;
-		border: 1px solid $gray;
+		border: none;
 	}
 }

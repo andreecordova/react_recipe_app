@@ -1,44 +1,62 @@
-.recipe_item {
-	border-radius: 4px;
-	border: none;
+.link_recipe_item {
 	margin-right: 0;
 	padding: 0rem remy(10);
 	margin-bottom: remy(20);
-	cursor: pointer;
-	color: $white;
 
+	.recipe_item {
+		border-radius: remy(10);
+		box-shadow: 0rem remy(5) remy(20) rgb(71,71,71);
+		background-color: $white;
+		border: none;
+		cursor: pointer;
+		color: $gray;
+		text-align: center;
+		max-height: remy(420);
+		min-height: remy(420);
+		padding: remy(15);
+	
+		.image_item {
+			text-align: center;
+			width: remy(200);
+			height: remy(200);
+			border-radius: 50%;
+	
+			@include desktop {
+				width: remy(300);
+				height: remy(300);
+			}
+		}
+	
+		.item_body {
+			padding: remy(20);
+			
+			.title {
+				font-size: remy(24);
+				font-weight: 600;
+				margin: 0 0 remy(10) 0;
+			}
+	
+			.calories {
+				font-size: remy(20);
+				margin-bottom: 0;
+				font-weight: 500;
+				font-style: italic;
+			}
+	
+			@include desktop {
+				padding: remy(15);
+			}
+		}
+
+		@include desktop {
+			max-height: remy(460);
+			min-height: remy(460);
+		}
+	}
+	
 	&:nth-child(3n) {
 		@include desktop {
 			margin-right: 0;
-		}
-	}
-
-	.image_item {
-		width: 100%;
-
-		@include desktop {
-			height: remy(300);
-		}
-	}
-
-	.item_body {
-		padding: remy(20);
-		
-		.title {
-			font-size: remy(24);
-			font-weight: 600;
-			margin: 0 0 remy(10) 0;
-		}
-
-		.calories {
-			font-size: remy(20);
-			margin-bottom: 0;
-			font-weight: 500;
-			font-style: italic;
-		}
-
-		@include desktop {
-			padding: remy(15);
 		}
 	}
 

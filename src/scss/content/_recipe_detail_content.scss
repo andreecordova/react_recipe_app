@@ -1,0 +1,79 @@
+.recipe {
+	max-width: 80%;
+	padding: remy(10) remy(23);
+	margin: remy(20) auto;
+
+	border-radius: remy(10);
+	box-shadow: 0rem remy(5) remy(20) rgb(71,71,71);
+	background-color: $white;
+
+	.back_button_container {
+		width: 100%;
+		padding: remy(15);
+
+		.back_button {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			background-color: $black;
+			border-radius: remy(10);
+			border: none;
+			font-size: remy(18);
+			font-weight: 700;
+			max-width: remy(210);
+			padding: remy(15);
+		}
+	}
+
+	.recipe_detail_container {
+		display: grid;
+    grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(1,auto);
+		padding: remy(15);
+
+		> div {
+			padding: remy(10);
+		}
+		
+		.recipe_image {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+
+			@include desktop {
+				width: 100%;
+				height: 100%;
+				border-radius: remy(10);
+			}
+		}
+
+		.title {
+			font-size: remy(32);
+			margin: 0rem 0rem remy(16);
+			font-weight:800;
+		}
+
+		.ingredients_list {
+			margin: 0rem 0rem remy(16);
+			
+			.ingredient_item {
+				font-size: remy(18);
+				font-weight: 400;
+				font-style: italic;
+				margin-bottom: remy(16);
+			}
+		}
+		
+		@include desktop {
+			grid-template-columns: repeat(2,1fr);
+			padding: remy(20);
+		}
+	}
+
+	@include desktop {
+		max-width: remy(1200);
+		margin: remy(8) auto;
+	}
+}

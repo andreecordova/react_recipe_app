@@ -13,7 +13,7 @@ const Recipes = ({recipes, selected}) => {
 		<div className="recipes_container">
 			{
 				recipes.map((recipe, index) => (
-					<Link key={index} to={`/recipe/${formatLabel(recipe.recipe.label)}`} onClick={() => { selected(recipe) }}>
+					<Link className="link_recipe_item" key={index} to={`/recipe/${formatLabel(recipe.recipe.label)}`} onClick={() => { selected(recipe) }}>
 						<Recipe recipe={recipe} />
 					</Link>
 				))

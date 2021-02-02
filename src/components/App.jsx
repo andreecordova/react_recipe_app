@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className={recipeSelected != null ? "App" : recipes.length > 0 ? "App results" : "App"}>
+    <div className={recipeSelected != null ? "App recipe_details" : recipes.length > 0 ? "App results" : "App"}>
       <Router>
         <Route path="/" exact render={props => (
           <Main {...props} change={change} search={search} recipes={recipes} selected={selected} />

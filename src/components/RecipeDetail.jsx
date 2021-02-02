@@ -1,12 +1,17 @@
 //React
 import React from 'react';
+import { Link } from "react-router-dom";
 
 //Components
-import Ingredient from './Ingredient';
+import Ingredients from './Ingredients';
 
 function RecipeDetail({recipeSelected}) {
 	return (
 		<div className="recipe">
+			<div className="back_button_container">
+				<Link className="back_button" to="/">Regresar</Link>
+			</div>
+
 			<div className="recipe_detail_container">
 				<div className="recipe_image_container">
 					<img
@@ -17,14 +22,7 @@ function RecipeDetail({recipeSelected}) {
 				</div>
 				<div className="recipe_information_container">
 					<h1 className="title">{recipeSelected.recipe.label}</h1>
-					<p className="sub_title">Ingredientes:</p>
-					<ul className="ingredients_list">
-					{
-						recipeSelected.recipe.ingredients.map((ingredient, index) => (
-							<Ingredient key={index} ingredient={ingredient} />
-						))
-					}
-					</ul>
+					<Ingredients ingredients={recipeSelected.recipe.ingredients} />
 				</div>
 			</div>
 		</div>
