@@ -8,7 +8,11 @@ import Recipe from './Recipe';
 //Functions
 import formatLabel from '../js/functions/formatLabel';
 
-const Recipes = ({recipes, selected}) => {
+const Recipes = ({recipes, SetRecipeSelected}) => {
+	const selected = (item) => {
+		SetRecipeSelected(item);
+	};
+
 	return (
 		<div className="recipes_container">
 			{

@@ -7,7 +7,7 @@ import filteredRecipes from '../js/functions/filteredRecipes';
 //Variables
 import api from '../js/variables/api';
 
-const SearchBox = ({ search, change, query, setQuery, SetRecipes }) => {
+const SearchBox = ({ query, setQuery, SetRecipes }) => {
 	const change = (e) => {
     const value = e.target.value; 
     setQuery(value);

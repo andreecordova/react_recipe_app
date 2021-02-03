@@ -15,7 +15,7 @@ function App() {
     <div className={recipeSelected != null ? "App recipe_details" : recipes.length > 0 ? "App results" : "App"}>
       <Router>
         <Route path="/" exact render={props => (
-          <Main {...props} change={change} search={search} recipes={recipes} selected={selected} query={query} setQuery={setQuery} SetRecipes={SetRecipes} SetRecipeSelected={SetRecipeSelected} />
+          <Main {...props} recipes={recipes} query={query} setQuery={setQuery} SetRecipes={SetRecipes} SetRecipeSelected={SetRecipeSelected} />
         )} />
         <Route path="/recipe/:label" render={props => (
           <RecipeDetail {...props} recipeSelected={recipeSelected} />
